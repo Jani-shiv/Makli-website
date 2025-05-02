@@ -1,85 +1,88 @@
    .navbar {
-   background-color: rgba(0, 0, 0, 0.6);
-   backdrop-filter: blur(10px);
-   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-   position: sticky;
-   top: 0;
-   z-index: 999;
-   padding: 10px 20px;
-   animation: slideDown 0.8s ease-out;
+       background-color: rgba(0, 0, 0, 0.6);
+       backdrop-filter: blur(10px);
+       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+       transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+       position: sticky;
+       top: 0;
+       z-index: 999;
+       padding: 10px 20px;
+       animation: slideDown 0.8s ease-out;
    }
 
    .navbar-nav {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   margin: 0;
-   padding: 0;
-   list-style: none;
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       margin: 0;
+       padding: 0;
+       list-style: none;
    }
 
    .navbar-nav .nav-link {
-   color: white;
-   margin: 0 12px;
-   text-decoration: none;
-   position: relative;
-   opacity: 0;
-   animation: fadeInSlideUp 0.8s forwards cubic-bezier(0.4, 0, 0.2, 1);
-   transform-origin: center;
-   transition: transform 0.3s ease, color 0.3s ease;
+       color: white;
+       margin: 0 12px;
+       text-decoration: none;
+       position: relative;
+       opacity: 0;
+       animation: fadeInSlideUp 0.8s forwards cubic-bezier(0.4, 0, 0.2, 1);
+       transform-origin: center;
+       transition: transform 0.3s ease, color 0.3s ease;
    }
 
    .navbar-nav .nav-link:hover {
-   color: #ffc107;
-   transform: translateY(-2px) scale(1.05);
+       color: #ffc107;
+       transform: translateY(-2px) scale(1.05);
    }
 
    .navbar-nav .nav-link::after {
-   content: '';
-   position: absolute;
-   bottom: -5px;
-   left: 0;
-   width: 0%;
-   height: 2px;
-   background-color: #ffc107;
-   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-   transform-origin: left;
+       content: '';
+       position: absolute;
+       bottom: -5px;
+       left: 0;
+       width: 0%;
+       height: 2px;
+       background-color: #ffc107;
+       transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+       transform-origin: left;
    }
 
    .navbar-nav .nav-link:hover::after {
-   width: 100%;
-   animation: glow 1s ease-in-out infinite alternate;
+       width: 100%;
+       animation: glow 1s ease-in-out infinite alternate;
    }
 
    @keyframes fadeInSlideUp {
-   from {
-       opacity: 0;
-       transform: translateY(20px);
-   }
-   to {
-       opacity: 1;
-       transform: translateY(0);
-   }
+       from {
+           opacity: 0;
+           transform: translateY(20px);
+       }
+
+       to {
+           opacity: 1;
+           transform: translateY(0);
+       }
    }
 
    @keyframes slideDown {
-   from {
-       transform: translateY(-100%);
-   }
-   to {
-       transform: translateY(0);
-   }
+       from {
+           transform: translateY(-100%);
+       }
+
+       to {
+           transform: translateY(0);
+       }
    }
 
    @keyframes glow {
-   from {
-       box-shadow: 0 0 5px #ffc107, 0 0 10px #ffc107, 0 0 15px #ffc107;
-   }
-   to {
-       box-shadow: 0 0 10px #ffc107, 0 0 20px #ffc107, 0 0 30px #ffc107;
-   }
+       from {
+           box-shadow: 0 0 5px #ffc107, 0 0 10px #ffc107, 0 0 15px #ffc107;
+       }
+
+       to {
+           box-shadow: 0 0 10px #ffc107, 0 0 20px #ffc107, 0 0 30px #ffc107;
+       }
    }
 
    @media (max-width: 991.98px) {
@@ -88,12 +91,14 @@
            background: transparent;
            transition: transform 0.3s ease;
        }
+
        .navbar-toggler:hover {
            transform: rotate(90deg);
        }
    }
 
-   body, html {
+   body,
+   html {
        height: 100%;
        margin: 0;
        padding: 0;
@@ -123,7 +128,7 @@
 
    .grid-item img:hover {
        transform: scale(1.03);
-       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
    }
 
    .navbar-nav a {
@@ -173,6 +178,7 @@
            opacity: 0;
            transform: scale(0.9);
        }
+
        to {
            opacity: 1;
            transform: scale(1);
@@ -184,6 +190,7 @@
            opacity: 0;
            transform: translateX(-50px);
        }
+
        to {
            opacity: 1;
            transform: translateX(0);
@@ -195,6 +202,7 @@
            opacity: 0;
            transform: translateX(50px);
        }
+
        to {
            opacity: 1;
            transform: translateX(0);
